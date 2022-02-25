@@ -10,15 +10,14 @@ function ProductsPage() {
 
   const filterBar = (str) => {
     let filteredList;
-    console.log(str.length);
 
-    if (str.length > 0) {
+    if (str === '') {
+      filteredList = products;
+     } else{
       filteredList = products.filter((product) => {
         return product.name.toLowerCase().includes(str.toLowerCase());
       });
-    } else {
-      filteredList = products;
-    }
+    } 
     console.log(filteredProducts);
     setFilteredProducts(filteredList);
   };

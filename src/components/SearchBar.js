@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
-function SearchBar(props) {
+function SearchBar({searchBar1}) {
   const [nameSearch, setNameSearch] = useState('');
 
     const handleSelect = (e) => {
       setNameSearch(e.target.value);
-      props.SearchBar1(e.target.value);
+      // props.SearchBar1(e.target.value);
+      searchBar1(e.target.value);
     }
 
   return (
